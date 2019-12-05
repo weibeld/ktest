@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: core
+spec:
+  selector:
+    matchLabels:
+      app: test
+      tier: backend
+  minReadySeconds: 10
+  template:
+    metadata:
+      labels:
+        app: test
+        tier: backend
+    spec:
+      containers:
+        - name: core
+          image: weibeld/ktest-core:latest
+          env:
+            - name: AMQP_URI
+              value: amqp://messaging-service
+            - name: QUEUE
+              value: requests

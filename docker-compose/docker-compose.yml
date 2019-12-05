@@ -1,0 +1,18 @@
+version: "3"
+services:
+  web:
+    image: weibeld/ktest-web
+    environment:
+      - AMQP_URI=amqp://rabbitmq
+      - QUEUE=requests
+    ports:
+      - "80:3000"
+  core:
+    image: weibeld/ktest-core
+    environment:
+      - AMQP_URI=amqp://rabbitmq
+      - QUEUE=requests
+  rabbitmq:
+    image: rabbitmq:3.7.7-management-alpine
+    ports:
+      - "15672:15672"
