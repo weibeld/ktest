@@ -1,4 +1,4 @@
-# Kubernetes Test
+# Kubernetes example application
 
 Run an application consisting of three containers on Kubernetes:
 
@@ -8,7 +8,11 @@ Run an application consisting of three containers on Kubernetes:
 
 *ktest-web* is a web application (Node.js), *ktest-core* is a backend (Java), and *rabbitmq* is a RabbitMQ server through which *ktest-web* and *ktest-core* communicate.
 
-## 1 Pod
+## Variants
+
+### 1 Pod
+
+**_Anti-pattern_**
 
 All containers run in the same pod.
 
@@ -16,7 +20,9 @@ Note: rectangle = service, squashed rectangle = deployment, circle = pod, cluste
 
 ![](kubernetes-1-pod/arch.png)
 
-## 2 Pods
+### 2 Pods
+
+**_Anti-pattern_**
 
 *ktest-core* and *rabbitmq* run in one pod, and *ktest-web* runs in another pod.
 
@@ -24,7 +30,7 @@ Note: rectangle = service, squashed rectangle = deployment, circle = pod, cluste
 
 ![](kubernetes-2-pods/arch.png)
 
-## 3 Pods
+### 3 Pods
 
 Each container runs in its own pod.
 
