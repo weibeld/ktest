@@ -18,7 +18,7 @@ All containers run in the same pod.
 
 Note: rectangle = service, squashed rectangle = deployment, circle = pod, cluster nodes are not depicted.
 
-![](kubernetes-1-pod/arch.png)
+![](option-1/arch.png)
 
 ### 2 Pods
 
@@ -28,7 +28,7 @@ Note: rectangle = service, squashed rectangle = deployment, circle = pod, cluste
 
 Note: rectangle = service, squashed rectangle = deployment, circle = pod, cluster nodes are not depicted.
 
-![](kubernetes-2-pods/arch.png)
+![](option-2/arch.png)
 
 ### 3 Pods
 
@@ -36,4 +36,4 @@ Each container runs in its own pod.
 
 Note: rectangle = service, squashed rectangle = deployment, circle = pod, cluster nodes are not depicted.
 
-![](kubernetes-3-pods/arch.png)
+![](option-3/arch.png)
